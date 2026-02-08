@@ -30,27 +30,29 @@ Used `LEAD` and `LAG` window functions to calculate the `Average Inter-Purchase 
 
 ```sql
 -- Sample Code Snippet: calculating the gap
-LEAD(rental_date) OVER (PARTITION BY customer_id ORDER BY rental_date) - rental_date
-
-3. Revenue Optimization (Best Categories)
+LEAD(rental_date) OVER (PARTITION BY customer_id ORDER BY rental_date) - rental_date 
+```
+#### 3. Revenue Optimization (Best Categories)
 Analyzed rental duration and total revenue per genre to identify high-performing content.
 
-Top Performer: Sports and Games generated the most revenue.
+* **Top Performer:** Sports and Games generated the most revenue.
 
-Low Performer: Children had high inventory but low rental counts.
+* **Low Performer:** Children had high inventory but low rental counts.
 
-4. Inventory Efficiency (Dead Stock Analysis)
+#### 4. Inventory Efficiency (Dead Stock Analysis)
 I performed a gap analysis to identify movies that exist in the inventory but have never been rented.
 
-Insight: The query returned 0 rows, indicating 100% inventory utilization. There is currently no 'Dead Stock' in any category, suggesting highly efficient stock rotation.
+* **Insight:** The query returned 0 rows, indicating 100% inventory utilization. There is currently no 'Dead Stock' in any category, suggesting highly efficient stock rotation.
 
-📈 Recommendations
+### 📈 Recommendations
 Based on the data, I recommend:
 
-Target "At Risk" Platinum Customers: Launch a "We Miss You" email campaign for high-spenders who haven't rented in 30 days.
+* **Target "At Risk" Platinum Customers:** Launch a "We Miss You" email campaign for high-spenders who haven't rented in 30 days.
 
-Monitor Engagement: Use the new SQL View to track customers whose inter-purchase time exceeds 15 days.
+* **Monitor Engagement:** Use the new SQL View to track customers whose inter-purchase time exceeds 15 days.
 
-Inventory Strategy: Since utilization is 100%, consider expanding the inventory of the top-performing genre (Sport/Games) to capture more demand.
+* **Inventory Strategy:** Since utilization is 100%, consider expanding the inventory of the top-performing genre (Sport/Games) to capture more demand.
 
-Author: Joshua Egbeyemi - www.linkedin.com/in/joshua-egbeyemi-0108ja08
+* **Author:** Joshua Egbeyemi - www.linkedin.com/in/joshua-egbeyemi-0108ja08
+
+
